@@ -1,7 +1,8 @@
 class CountdownTimer {
-  constructor({ targetDate }) {
+  constructor(options) {
     
-    this.targetDate = targetDate;
+    this.timer = document.querySelector(options.selector);
+    this.targetDate = options.targetDate;
 
     this.refs = {
       days: document.querySelector('[data-value="days"]'),
